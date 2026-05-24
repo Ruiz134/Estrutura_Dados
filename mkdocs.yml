@@ -1,0 +1,35 @@
+site_name: Estrutura de Dados
+site_description: Projeto de Estrutura de Dados
+site_author: Alan Ruiz
+
+repo_url: https://github.com/Ruiz134/Estrutura_Dados
+
+theme:
+  name: windmill-dark
+  include_search_page: true
+  search_index_only: true
+  history_buttons: true
+  article_nav_top: true
+  article_nav_bottom: true
+
+nav:
+  - Home: index.md
+  - API: api.md
+
+plugins:
+  - search
+  - mkdocstrings:
+      handlers:
+        python:
+          paths:
+            - .
+          options:
+            show_source: true
+            show_root_heading: true
+
+markdown_extensions:
+  - toc:
+      permalink: "#"
+
+extra:
+  version: 0.1.0

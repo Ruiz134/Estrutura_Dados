@@ -12,7 +12,12 @@ dependencies = [
     "openpyxl (>=3.1.5,<4.0.0)",
     "pytest (>=9.0.3,<10.0.0)",
     "isort (>=8.0.1,<9.0.0)",
-    "blue (>=0.9.1,<0.10.0)"
+    "blue (>=0.9.1,<0.10.0)",
+    "mkdocs (>=1.6.1,<2.0.0)",
+    "taskipy (>=1.14.1,<2.0.0)",
+    "mkdocstrings (>=1.0.4,<2.0.0)",
+    "mkdocstrings-python (>=2.0.3,<3.0.0)",
+    "mkdocs-windmill-dark (>=0.2.0,<0.3.0)",
 ]
 
 [tool.poetry]
@@ -21,3 +26,10 @@ package-mode = false
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.taskipy.tasks]
+run= "python app/main.py"
+test = "pytest"
+docs = "mkdocs serve"
+build = "mkdocs build"
+kill = "kill -9 $(lsof -t -i :8000)"
