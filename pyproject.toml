@@ -8,6 +8,9 @@ authors = [
 license = "Não"
 requires-python = "3.11.3"
 dependencies = [
+    "pandas (>=3.0.3,<4.0.0)",
+    "openpyxl (>=3.1.5,<4.0.0)",
+    "pytest (>=9.0.3,<10.0.0)"
 ]
 
 [tool.poetry]
