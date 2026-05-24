@@ -4,7 +4,11 @@ import glob # biblioteca para buscar arquivos e pastas (listar arquivos)
 from typing import List # biblioteca para tipagem (retornar lista de DataFrames)
 from pathlib import Path 
 
-"""
+local = Path(__file__).parents[0].resolve()
+path = local / "data" / "input"
+
+def extract_from_excel(input_folder: str) -> List[pd.DataFrame]:
+    """
 Função para ler os arquivos de uma pasta e retornar um DataFrame
 
 Args:
@@ -14,10 +18,6 @@ Returns:
     List[pd.DataFrame]: Lista de DataFrames com a lista de DataFrames 
     
 """
-local = Path(__file__).parents[0].resolve()
-path = local / "data" / "input"
-
-def extract_from_excel(input_folder: str) -> List[pd.DataFrame]:
     all_files = glob.glob(os.path.join(input_folder, "*.xlsx"))
     data_frame_list = []
     for file in all_files:
