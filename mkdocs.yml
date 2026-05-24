@@ -2,6 +2,7 @@ site_name: Estrutura de Dados
 site_description: Projeto de Estrutura de Dados
 site_author: Alan Ruiz
 
+site_url: https://ruiz134.github.io/Estrutura_Dados/
 repo_url: https://github.com/Ruiz134/Estrutura_Dados
 
 theme:
