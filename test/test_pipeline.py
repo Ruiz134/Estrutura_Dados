@@ -1,8 +1,10 @@
 import pandas as pd
+
 from app.pipeline.transform import transform_concat_dataframes
 
-df_1 = pd.DataFrame({'col1': [1,2], 'col2': [4,5]})
-df_2 = pd.DataFrame({'col1': [7,8], 'col2': [10,11]})
+df_1 = pd.DataFrame({'col1': [1, 2], 'col2': [4, 5]})
+df_2 = pd.DataFrame({'col1': [7, 8], 'col2': [10, 11]})
+
 
 def testar_concatenacao_lista_dataframe():
     """

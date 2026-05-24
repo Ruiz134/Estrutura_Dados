@@ -1,6 +1,6 @@
-import pandas as pd
 from typing import List
 
+import pandas as pd
 
 
 def transform_concat_dataframes(data: list[pd.DataFrame]) -> pd.DataFrame:
@@ -11,9 +11,9 @@ def transform_concat_dataframes(data: list[pd.DataFrame]) -> pd.DataFrame:
 
     args:
         data (list[pd.DataFrame]): Lista de DataFrames
-    
+
     returns:
-        pd.DataFrame: DataFrame concatenado
+        pd.DataFrame: DataFrame concatenado.
     """
 
     df = pd.concat(data, ignore_index=True)
