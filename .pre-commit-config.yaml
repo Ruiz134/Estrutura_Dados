@@ -1,24 +1,25 @@
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.4.0
+    rev: v5.0.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
       - id: check-yaml
       - id: check-added-large-files
 
+  - repo: https://github.com/PyCQA/isort
+    rev: 5.13.2
+    hooks:
+      - id: isort
+        args: ["--profile", "black"]
+
   - repo: https://github.com/psf/black
-    rev: 23.9.1
+    rev: 26.3.1
     hooks:
       - id: black
 
-  - repo: https://github.com/pre-commit/mirrors-isort
-    rev: v5.10.1
-    hooks:
-      - id: isort
-
   - repo: https://github.com/PyCQA/pydocstyle
-    rev: 6.3.0 # Modify this to be the version you want
+    rev: 6.3.0
     hooks:
       - id: pydocstyle
 
@@ -27,7 +28,5 @@ repos:
       - id: pip-audit
         name: pip-audit
         entry: pip-audit
-        args: []
         language: system
         pass_filenames: false
-        types: [python] # Opcional: se você quiser que isso seja executado apenas quando arquivos Python forem alterados.
